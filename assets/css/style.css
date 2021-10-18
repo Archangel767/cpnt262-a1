@@ -1,0 +1,374 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  background-color: #3e454c;
+  min-width: 350px;
+}
+
+header {
+  background-color: #000000;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 20px;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+h2 {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.large {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 80px;
+  padding: 1%;
+}
+
+/*--------------------- Hamburger Button ---------------------*/
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: fixed;
+  z-index: 9999;
+  right: 5%;
+  top: 4rem;
+  width: 2rem;
+  height: 2rem;
+  background: black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.menu-toggle.active {
+  transform: (-180deg);
+}
+
+.menu-toggle span {
+  background-color: white;
+  width: 100%;
+  height: 3px;
+}
+
+/*-- Toggle animation --*/
+
+.menu-toggle.active span:nth-child(1) {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/*-- Nav --*/
+
+nav {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.nav.active {
+  pointer-events: auto;
+}
+
+.nav-right {
+  position: relative;
+  z-index: 9;
+  right: 0%;
+  top: 0;
+  width: -100%;
+  height: 50vh;
+  background-color: white;
+  transition: 0.8s;
+  background-color: #49515a00;
+}
+
+.nav-right.active {
+  right: 30%;
+  width: 50%;
+  transition: 0.5s;
+}
+
+.nav-right ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  top: 15%;
+  right: -10%;
+  height: 10%;
+  list-style: none;
+  color: white;
+}
+
+.nav-right > ul > li {
+  border: solid 1px black;
+  background-color: rgb(199, 199, 199);
+  padding: 20px 100px;
+}
+
+.nav-link {
+  opacity: 0;
+  position: relative;
+  left: -10%;
+}
+
+.nav-link.active {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/*--------------------- Hero section starts here ---------------------*/
+
+.hero {
+  background: url(../images/mountainfog.jpeg);
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding: 4rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.hero > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.hero > article > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/*  broke AF, fix later...
+#sign-up-btn {
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid #68d7ff;
+  font-family: 'Gemunu Libre', sans-serif;
+  border-radius: 15px;
+
+  padding: 20px 10%;
+  transition: background-color 200ms ease;
+  font-size:clamp(1rem, 1vw, 2rem);
+ }
+
+#sign-up-btn:hover {
+  color:  #68d7ff;
+  background-color: #68d7ff;  
+  color: rgb(255, 255, 255);
+}
+
+*/
+
+/*--------------------- Main section starts here ---------------------*/
+
+main {
+  display: block;
+  margin: 0 auto;
+  padding: 0px;
+  max-width: 2560px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+figure {
+  width: 27%;
+  min-width: 400px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+figure:hover {
+  background-color: #3e454c;
+  box-shadow: 0px 15px 20px #000;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+figure > img {
+  width: 100%;
+  height: 105%;
+}
+
+figure > figcaption {
+  position: absolute;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  text-shadow: 1px 1px black;
+  bottom: 0;
+  text-color: white;
+  background-color: hsla(189, 100%, 50%, 0.397);
+  width: 100%;
+  border: 1px solid grey;
+}
+
+.text-box {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-shadow: 1px 1px black;
+  color: white;
+  padding: 2%;
+}
+
+/*--------------------- Sign-up Form ---------------------*/
+
+.sign-up {
+  display: flex;
+  background-color: white;
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding: 10rem 4rem;
+  justify-content: center;
+  color: black;
+}
+
+form {
+  flex-direction: column;
+  background-color: #f1f1f1;
+  margin: 0%;
+  padding: 0% 4%;
+  max-width: 500px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+form > h3 {
+  text-align: center;
+}
+
+legends {
+  background-color: #353535;
+  color: #fff;
+  padding: 3px 30px;
+  margin-right: 60%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#country {
+  max-width: 50%;
+}
+
+.birthdate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 10%;
+}
+
+button {
+  margin: 50px;
+  outline-offset: 5px;
+  background-color: #353535;
+  padding: 20px;
+  color: white;
+}
+
+.agree {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+/*--------------------- Google Maps API ---------------------*/
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10%;
+  padding: 0% 4%;
+  height: 800px;
+}
+
+.location > h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px black;
+}
+
+/*--------------------- Footer section starts here ---------------------*/
+
+footer {
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px;
+  height: 100px;
+  color: white;
+  list-style-type: none;
+}
+
+.socialmedialinks > ul > li > img {
+  height: 50px;
+  width: 50px;
+}

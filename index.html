@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <script src="assets/js/hamburger.js" defer></script>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Logo and Hamburger Nav -->
+    <header>
+      <img src="assets/icons/logo.png" alt="Logo" class="logo" />
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="nav">
+        <div class="nav-right">
+          <ul>
+            <li class="nav-link active">
+              <a class="large" href="#">Products</a>
+            </li>
+            <li class="nav-link active">
+              <a class="large" href="#">Gallery</a>
+            </li>
+            <li class="nav-link active"><a class="large" href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Main tile links and articles -->
+
+    <main>
+      <section class="hero">
+        <h1>Take your Art to the Next Level</h1>
+        <article>
+          <p>
+            With premium subscriptions, get everything you need to help build
+            your presence and advance your career!
+          </p>
+          <a href="#form" id="sign-up-btn">
+            <h2>Begin your journey today!</h2>
+          </a>
+        </article>
+      </section>
+      <section class="gallery">
+        <figure>
+          <img src="assets/images/pexels-pixabay-51383.jpg" alt="Products" />
+          <figcaption>Products</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/background-collage.jpg" alt="Gallery" />
+          <figcaption>Gallery</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="assets/images/pexels-andrea-piacquadio-3791136.jpg"
+            alt="Team"
+          />
+          <figcaption>Meet the team</figcaption>
+        </figure>
+      </section>
+      <article class="text-box">
+        <h3>Think you'd like to give us some money? We like money!</h3>
+        <p class="blurb">
+          This site provides you with a simple way to upload your photoes and
+          show off your portfolio to be seen by random strangers on the
+          internest. Showcase high resolution images, videos, short clips,
+          steches, 3D scenes and maybe even some other stuff, who knows. Add
+          your work and production experience.
+        </p>
+        <p class="blurb">
+          With your uploaded for display, you can be sure you’re selling
+          high-quality products on demand, without the hassle. Just upload your
+          work, set your markup and you’re ready to start selling. We take care
+          of everything else.
+        </p>
+      </article>
+
+      <!-- Signup data form / data -->
+      <article class="sign-up" id="form">
+        <form action="https://formspree.io/f/xpzknlwz" method="POST">
+          <h3>Sign Up Now !</h3>
+          <fieldset>
+            <label for="text">Name</label>
+            <input type="text" name="Name" id="name" />
+            <label for="email">Email</label>
+            <input type="email" name="Email" id="email" />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </fieldset>
+
+          <fieldset>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+              <option value="Country">Country</option>
+              <option value="Canada">Canada</option>
+              <option value="USA">USA</option>
+              <option value="Mexico">Mexico</option>
+            </select>
+            <label for="birthdate" id="birthdate">Date of Birth: </label>
+            <div class="birthdate">
+              <select id="month" name="month">
+                <option value="null">Month</option>
+                <option value="1">January</option>
+                <option value="1">February</option>
+                <option value="1">March</option>
+                <option value="1">April</option>
+                <option value="1">May</option>
+                <option value="1">June</option>
+                <option value="1">July</option>
+                <option value="1">August</option>
+                <option value="1">September</option>
+                <option value="1">October</option>
+                <option value="1">November</option>
+                <option value="1">December</option>
+              </select>
+              <select id="day" name="day">
+                <option value="null">Day</option>
+                <option value="2">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="2">4</option>
+                <option value="2">5</option>
+                <option value="2">6</option>
+                <option value="2">7</option>
+                <option value="2">8</option>
+                <option value="2">9</option>
+                <option value="2">10</option>
+                <option value="2">11</option>
+                <option value="2">12</option>
+                <option value="2">13</option>
+                <option value="2">14</option>
+                <option value="2">15</option>
+                <option value="2">16</option>
+                <option value="2">17</option>
+                <option value="2">18</option>
+                <option value="2">19</option>
+                <option value="2">20</option>
+                <option value="2">21</option>
+                <option value="2">22</option>
+                <option value="2">23</option>
+                <option value="2">24</option>
+                <option value="2">25</option>
+                <option value="2">26</option>
+                <option value="2">27</option>
+                <option value="2">28</option>
+                <option value="2">29</option>
+                <option value="2">30</option>
+                <option value="2">31</option>
+              </select>
+              <select id="year" name="year">
+                <option value="null">Year</option>
+                <option value="3">2005</option>
+                <option value="3">2004</option>
+                <option value="3">2003</option>
+                <option value="3">2002</option>
+                <option value="3">2001</option>
+                <option value="3">2000</option>
+                <option value="3">1999</option>
+                <option value="3">....</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div>
+            <input type="checkbox" id="checkbox" name="agree" />
+            <label for="agree" class="agree"
+              >By clicking Continue, you are confirming that you are at least 16
+              years of age and that you have read and agree to the Program Terms
+              and Conditions.</label
+            >
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </article>
+
+      <!-- Google Maps API -->
+      <section class="location">
+        <h3>If you wish to hunt us down in person, pleasse start here...</h3>
+        <iframe
+          width="800"
+          height="450"
+          style="border: 0"
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBmw_sdfj-IQ8lEXfLaLOG7YszIfzR5Vb8&q=Southern+Alberta+Institute+of+Technology,Calgary"
+        >
+        </iframe>
+      </section>
+    </main>
+
+    <!-- Social Media and Copyright -->
+
+    <footer>
+      <div class="socialmedialinks">
+        <ul>
+          <li><img src="assets/icons/facebook-brands.png" alt="Facebook" /></li>
+          <li><img src="assets/icons/twitter-brands.png" alt="Twitter" /></li>
+          <li>
+            <img src="assets/icons/instagram-brands.png" alt="instagram" />
+          </li>
+        </ul>
+      </div>
+      <p>&copy;Copyright 2021 by nobody. All rights reversed.</p>
+    </footer>
+  </body>
+</html>
